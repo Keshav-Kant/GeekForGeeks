@@ -1,0 +1,25 @@
+def transitionPoint(arr, n):
+    #Code here
+    k=len(arr)
+    sum=0
+    for i in range(0,k):
+        sum=sum+arr[i]
+    if k==sum:
+        return 0
+    elif sum==0:
+        return -1
+    else:
+        l=arr.index(max(arr))
+        return l
+
+#{ 
+#  Driver Code Starts
+#driver code
+if __name__=='__main__':
+    t=int(input())
+    for i in range(t):
+        n = int(input())
+        arr = list(map(int, input().strip().split()))
+        print(transitionPoint(arr, n))
+
+# } Driver Code Ends
